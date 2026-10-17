@@ -24,7 +24,7 @@ Aplicação de linha de comando (CLI) em Python para gerenciar tarefas do dia a 
 Requisito: Python 3 instalado.
 
 ```bash
-git clone https://github.com/<seu-usuario>/tasktracker-projeto.git
+git clone https://github.com/VixLmm/tasktracker-projeto.git
 cd tasktracker-projeto
 python src/main.py
 ```
