@@ -1,4 +1,4 @@
-cat > README.md << 'EOF'
+
 # TaskTracker
 
 Aplicação de linha de comando (CLI) em Python para gerenciar tarefas do dia a dia. Projeto cumulativo do Bootcamp II (Fase 2: Git, GitHub e Python | Fase 3: Docker e orquestração).
@@ -87,4 +87,3 @@ tasktracker-projeto/
 ## Autor
 
 Lucas Maubrigades Marotti - Bootcamp II
-EOF
