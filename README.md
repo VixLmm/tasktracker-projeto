@@ -28,7 +28,7 @@ Aplicação de linha de comando (CLI) em Python para gerenciar tarefas do dia a 
 Requisito: Docker e Docker Compose instalados.
 
 ```bash
-git clone https://github.com/<seu-usuario>/tasktracker-projeto.git
+git clone https://github.com/VixLmm/tasktracker-projeto.git
 cd tasktracker-projeto
 ```
 
