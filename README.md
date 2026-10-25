@@ -1,6 +1,7 @@
+cat > README.md << 'EOF'
 # TaskTracker
 
-Aplicação de linha de comando (CLI) em Python para gerenciar tarefas do dia a dia. Projeto cumulativo do Bootcamp II (Fase 2: Git, GitHub e Python).
+Aplicação de linha de comando (CLI) em Python para gerenciar tarefas do dia a dia. Projeto cumulativo do Bootcamp II (Fase 2: Git, GitHub e Python | Fase 3: Docker e orquestração).
 
 ## Funcionalidades
 
@@ -18,18 +19,48 @@ Aplicação de linha de comando (CLI) em Python para gerenciar tarefas do dia a 
 ## Tecnologias
 
 - Python 3
+- Docker e Docker Compose
 
 ## Como executar
 
-Requisito: Python 3 instalado.
+### Com Docker (recomendado)
+
+Requisito: Docker e Docker Compose instalados.
 
 ```bash
 git clone https://github.com/<seu-usuario>/tasktracker-projeto.git
 cd tasktracker-projeto
+```
+
+Como construir a imagem:
+
+```bash
+docker build -t tasktracker .
+```
+
+Como rodar o container em modo isolado:
+
+```bash
+docker run -it tasktracker
+```
+
+Como rodar via orquestração (Recomendado):
+
+```bash
+docker compose run --rm tasktracker-app
+```
+
+> O `docker-compose.yml` ativa `stdin_open` e `tty`, necessários para que o menu interativo (`input()`) funcione dentro do container. Por isso usamos `docker compose run` em vez de `docker compose up`.
+
+### Sem Docker
+
+Requisito: Python 3 instalado.
+
+```bash
 python src/main.py
 ```
 
-Menu da aplicação:
+### Menu da aplicação
 
 ```
 1. Cadastrar nova tarefa
@@ -43,8 +74,10 @@ Observação: as tarefas ficam apenas em memória e são perdidas ao encerrar o 
 
 ```
 tasktracker-projeto/
-├── README.md
 ├── .gitignore
+├── Dockerfile
+├── docker-compose.yml
+├── README.md
 ├── docs/
 │   └── planejamento_logico.pdf
 └── src/
@@ -53,4 +86,5 @@ tasktracker-projeto/
 
 ## Autor
 
- Lucas Maubrigades Marotti - Bootcamp II
+Lucas Maubrigades Marotti - Bootcamp II
+EOF
